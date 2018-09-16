@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link rel="stylesheet" href="common/css/reset.css">
+    <link rel="stylesheet" href="common/css/style.css">
     <title>todoProject</title>
     <style>
         html, body {
@@ -13,22 +14,13 @@
         body{
             background: #edf0f1;
         }
-        ul#complete:not(:empty) {
-            margin-top: 70px;
-            background: blue;
-        }
     </style>
 </head>
   <body>
-      <input id="item" type="text" placeholder="input text">
-      <button id="add">버튼</button>
-      <ul id="todo">
-      </ul>
-        
-      <ul id="complete">
-        
-    </ul>
-  <script>
-  </script>
+        <header>
+            <input type="text" placeholder="Enter an activity..." id="item">
+            <button type="button" id="addItem"></button>
+        </header>
+        <script src="common/js/script.js"></script>
   </body>
 </html>
