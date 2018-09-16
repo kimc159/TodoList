@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link rel="stylesheet" href="common/css/reset.css">
     <link rel="stylesheet" href="common/css/style.css">
+   
     <title>todoProject</title>
     <style>
         html, body {
@@ -13,6 +14,7 @@
         }
         body{
             background: #edf0f1;
+            padding: 80px 0 0 0;
         }
     </style>
 </head>
@@ -21,6 +23,20 @@
             <input type="text" placeholder="Enter an activity..." id="item">
             <button type="button" id="addItem"></button>
         </header>
+
+        <div class="container">
+            <ul id="todo">
+                <li><i class="fal fa-trash"></i>
+                    <div class="buttons">
+                        <button type="button">remove</button>
+                        <button type="button">add</button>
+                    </div>
+                </li>
+            </ul>
+            <ul id="complete">
+            </ul>
+        </div>
+
         <script src="common/js/script.js"></script>
   </body>
 </html>
