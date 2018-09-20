@@ -95,11 +95,37 @@ ul.todo li {
     margin: 0 0 10px 0;
     padding: 0 100px 0 0;
     box-sizing: border-box;
-    padding: 15px;
+    padding: 15px 15px 15px 50px;
 }
 
 ul.todo li:last-of-type {
     margin:0;
+}
+ul.todo li .starButton {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+ul.todo li .star {
+    width: 50px;
+    height: 50px;
+	background: none;
+	border: 0;
+	box-shadow: none;
+	outline: none;
+	position: relative;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance:none;
+    -o-appearance: none;
+    appearance: none;
+}
+ 
+ul.todo li .starButton  button.star.on {
+	color: #e9ff00;
 }
 ul.todo li .buttons {
     width: 100px;
@@ -133,10 +159,12 @@ ul.todo li .buttons  button:last-of-type:before {
     left: 0;
     background:#edf0f1;
 }
-ul.todo li .buttons  button.remove:hover {
+
+/* ul.todo li .buttons  button.remove:hover {
 	color: red;
-}
-ul.todo li .buttons  button.complete:hover {
+}*/
+
+ul.todo li .buttons  button.complete.on {
 	color: #25b99a
 }
 ul#todo:empty::after {
