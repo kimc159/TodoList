@@ -74,10 +74,32 @@ header button {
 }
 
 .container {
+	position:relative;
     width: 100%;
     float: left;
-    padding: 15px;
-    box-sizing: border-box;
+    padding: 50px 15px 15px 15px;
+	box-sizing: border-box;
+}
+.container .allcont {
+	position:absolute;
+	right: 15px;
+	top: 5px;
+	width:100px;
+	height: 50px;
+}
+.container .allcont li {
+	float: left;
+}
+.container .allcont li button {
+	width: 50px;
+	height:50px;
+	outline: none;
+	
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance:none;
+    -o-appearance: none;
+    appearance: none;
 }
 ul.todo {
     width: 100%;
@@ -184,11 +206,11 @@ ul#complete:not(:empty) {
 	margin-top:70px;
 	opacity: 0.6;
 }
-ul#complete:not(:empty):before {
+ul#complete::before {
 	content: '';
 	display:block;
 	width: 70px;
 	height: 2px;
 	background: #ccc;
-	margin: 0 auto 30px;
+	margin: 30px auto;
 }

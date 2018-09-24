@@ -23,6 +23,38 @@ document.getElementById('item').addEventListener('keyup', function(e) {
 		addItem(value);
 	}
 });
+document.getElementById('AllRemove').addEventListener('click', function() {
+	console.log('AllRemove in');
+	var todo = document.getElementById('todo');
+	var complete = document.getElementById('complete');
+
+	while(todo.firstChild) {
+		todo.removeChild(todo.firstChild);
+	}
+	
+	while (complete.firstChild) {
+		complete.removeChild(complete.firstChild);
+	}
+	data.complete.splice(0, data.complete.length);
+	data.todo.splice(0, data.todo.length);
+	dataObjectUpdate();
+
+})
+document.getElementById('AllComplete').addEventListener('click', function() {
+	console.log('AllComplete in');
+	var todo = document.getElementById('todo');
+	console.log(data.todo.length);
+	for(var j=0; j<data.todo.length; j++) {
+		var value = data.todo[j];
+		addItemList(value, true);
+	}
+
+	while(todo.firstChild) {
+		todo.removeChild(todo.firstChild);
+	}
+	data.todo.splice(0, data.todo.length);
+	dataObjectUpdate();
+})
 /* 버튼 클릭 및 Enter 키 입력시 input 데이터 저장 */
 function addItem(value) {
 	addItemList(value);

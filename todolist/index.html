@@ -25,18 +25,13 @@
             <input type="text" placeholder="Enter an activity..." id="item">
             <button type="button" id="addItem"></button>
         </header>
-
         <div class="container">
-            <ul class="todo" id="todo">
-                <!-- <li><i class="fal fa-trash"></i>
-                    <div class="buttons">
-                        <button type="button" id="remove">remove</button>
-                        <button type="button" id="add">add</button>
-                    </div>
-                </li> -->
-            </ul>
-            <ul class="todo" id="complete">
-            </ul>
+			<ul class="allcont">
+				<li> <button id="AllRemove"><i class="fas fa-trash-alt"></i></button> </li>
+				<li><button id="AllComplete"><i class="fas fa-check-circle"></i></button> </li>
+			</ul>
+            <ul class="todo" id="todo"></ul>
+            <ul class="todo" id="complete"></ul>
         </div>
 
         <script src="common/js/script.js"></script>
